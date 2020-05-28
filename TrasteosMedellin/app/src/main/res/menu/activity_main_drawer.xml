@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:showIn="navigation_view">
+
+    <group android:checkableBehavior="single">
+        <item
+            android:id="@+id/nav_perfil"
+            android:icon="@drawable/avatar"
+            android:title="Perfil" />
+        <item
+            android:id="@+id/nav_new_service"
+            android:icon="@drawable/truck"
+            android:title="Nuevo Servicio" />
+        <item
+            android:id="@+id/nav_active_services"
+            android:icon="@drawable/services"
+            android:title="Servicios Activos" />
+        <item
+            android:id="@+id/nav_historial"
+            android:icon="@drawable/historial"
+            android:title="Historial" />
+        <item
+            android:id="@+id/nav_support"
+            android:icon="@drawable/support"
+            android:title="Soporte" />
+        <item
+            android:id="@+id/nav_logout"
+            android:icon="@drawable/logout"
+            android:title="Cerrar Sesión" />
+    </group>
+
+</menu>

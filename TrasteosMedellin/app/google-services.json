@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "1038120828281",
+    "firebase_url": "https://trasteos-medellin-97997.firebaseio.com",
+    "project_id": "trasteos-medellin-97997",
+    "storage_bucket": "trasteos-medellin-97997.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1038120828281:android:88c013e132526a7e7343a8",
+        "android_client_info": {
+          "package_name": "com.devjpah.trasteos_medellin"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1038120828281-e92o1sgbg0gi7vl9qdr6ohpdmu6mhaui.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devjpah.trasteos_medellin",
+            "certificate_hash": "47036dec4ec2d4a444e256b2ce068c1ed8f85b5f"
+          }
+        },
+        {
+          "client_id": "1038120828281-e4qe9jtl98gpbcakepi15dhqr0d7moh6.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDBp6OFbZwr-MZiymbDt52KyXGVABQZwEk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1038120828281-e4qe9jtl98gpbcakepi15dhqr0d7moh6.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
