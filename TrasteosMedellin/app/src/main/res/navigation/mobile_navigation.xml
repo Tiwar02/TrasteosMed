@@ -7,37 +7,31 @@
 
     <fragment
         android:id="@+id/nav_perfil"
-        android:name="com.devjpah.trasteos_medellin.ui.newservice.NewServiceFragment"
-        android:label="Perfil"
-        tools:layout="@layout/fragment_perfil" />
+        android:name="com.devjpah.trasteos_medellin.ui.perfil.PerfilFragment"
+        android:label="Perfil" />
 
     <fragment
         android:id="@+id/nav_new_service"
-        android:name="com.devjpah.trasteos_medellin.ui.perfil.PerfilFragment"
-        android:label="Nuevo Servicio"
-        tools:layout="@layout/fragment_new_service" />
+        android:name="com.devjpah.trasteos_medellin.ui.newservice.NewServiceFragment"
+        android:label="Nuevo Servicio" />
 
     <fragment
         android:id="@+id/nav_active_services"
-        android:name="com.devjpah.trasteos_medellin.ui.support.SupportFragment"
-        android:label="Servicios Activos"
-        tools:layout="@layout/fragment_active_services" />
+        android:name="com.devjpah.trasteos_medellin.ui.activeservices.ActiveServicesFragment"
+        android:label="Servicios Activos" />
 
     <fragment
         android:id="@+id/nav_historial"
-        android:name="com.devjpah.trasteos_medellin.ui.logout.LogoutFragment"
-        android:label="Historial"
-        tools:layout="@layout/fragment_historial" />
+        android:name="com.devjpah.trasteos_medellin.ui.historial.HistorialFragment"
+        android:label="Historial" />
 
     <fragment
         android:id="@+id/nav_support"
-        android:name="com.devjpah.trasteos_medellin.ui.historial.HistorialFragment"
-        android:label="Soporte"
-        tools:layout="@layout/fragment_support" />
+        android:name="com.devjpah.trasteos_medellin.ui.support.SupportFragment"
+        android:label="Soporte" />
 
     <fragment
         android:id="@+id/nav_logout"
-        android:name="com.devjpah.trasteos_medellin.ui.activeservices.ActiveServicesFragment"
-        android:label="Cerrar Sesión"
-        tools:layout="@layout/fragment_logout" />
+        android:name="com.devjpah.trasteos_medellin.ui.logout.LogoutFragment"
+        android:label="Cerrar Sesión" />
 </navigation>

@@ -16,20 +16,11 @@ import com.devjpah.trasteos_medellin.R;
 
 public class SupportFragment extends Fragment {
 
-    private SupportViewModel slideshowViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        slideshowViewModel =
-                ViewModelProviders.of(this).get(SupportViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_active_services, container, false);
-        final TextView textView = root.findViewById(R.id.text_slideshow);
-        slideshowViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        View root = inflater.inflate(R.layout.fragment_support, container, false);
+
+
         return root;
     }
 }

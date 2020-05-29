@@ -16,20 +16,10 @@ import com.devjpah.trasteos_medellin.R;
 
 public class HistorialFragment extends Fragment {
 
-    private HistorialViewModel shareViewModel;
-
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
-        shareViewModel =
-                ViewModelProviders.of(this).get(HistorialViewModel.class);
-        View root = inflater.inflate(R.layout.fragment_support, container, false);
-        final TextView textView = root.findViewById(R.id.text_share);
-        shareViewModel.getText().observe(this, new Observer<String>() {
-            @Override
-            public void onChanged(@Nullable String s) {
-                textView.setText(s);
-            }
-        });
+        View root = inflater.inflate(R.layout.fragment_historial, container, false);
+
         return root;
     }
 }

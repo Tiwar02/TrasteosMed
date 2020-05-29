@@ -1,119 +1,59 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:orientation="vertical"
     android:layout_height="match_parent">
 
-    <LinearLayout
-        android:id="@+id/LinearUno"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="vertical"
-        app:layout_constraintBottom_toBottomOf="parent"
+    <ImageButton
+        android:id="@+id/btnExpress"
+        android:layout_width="145dp"
+        android:layout_height="145dp"
+        android:layout_marginTop="4dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/truckexpress"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        tools:ignore="MissingConstraints">
+        app:layout_constraintTop_toBottomOf="@+id/textView3"
+        app:srcCompat="@android:drawable/btn_star" />
 
-        <EditText
-            android:id="@+id/etTipoVehiculo"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tipo de Vehiculo">
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="116dp"
+        android:text="Servicio Express"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.502"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
 
-        </EditText>
+    <TextView
+        android:id="@+id/textView10"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="52dp"
+        android:text="Servicio Compartido"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.523"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btnExpress" />
 
-        <EditText
-            android:id="@+id/etCiudadCargue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ciudad de Carga">
+    <ImageButton
+        android:id="@+id/btnCompartido"
+        android:layout_width="144dp"
+        android:layout_height="145dp"
+        android:layout_marginBottom="50dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/truckcompartido"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView10"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@android:drawable/btn_star" />
 
-        </EditText>
-
-        <EditText
-            android:id="@+id/etDireccionCarga"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Direccion de Carga">
-
-        </EditText>
-
-        <EditText
-            android:id="@+id/etCiudadDescargue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Ciudad de Descargue">
-
-        </EditText>
-
-        <EditText
-            android:id="@+id/etDireccionDescargue"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Direccion de Descargue">
-
-        </EditText>
-
-        <EditText
-            android:id="@+id/etEmailUsuario"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Email">
-
-        </EditText>
-
-        <EditText
-            android:id="@+id/etFechaHora"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Fecha y hora de recogida">
-
-        </EditText>
-
-        <EditText
-            android:id="@+id/etDescripcion"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Descripcion del Trasteo">
-
-        </EditText>
-
-        <EditText
-            android:id="@+id/etTipoServicio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Tipo de Servicio">
-
-        </EditText>
-
-        <EditText
-            android:id="@+id/etPrecio"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Precio">
-
-        </EditText>
-
-        <EditText
-            android:id="@+id/etEstado"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:hint="Estado">
-
-        </EditText>
-
-        <Button
-            android:id="@+id/btnIngresarNS"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="20dp"
-            android:text="INGRESAR">
-
-        </Button>
-
-
-    </LinearLayout>
-</LinearLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

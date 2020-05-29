@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".register_service">
+
+    <LinearLayout
+        android:id="@+id/LinearUno"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:ignore="MissingConstraints">
+
+        <EditText
+            android:id="@+id/etTipoVehiculo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de Vehiculo">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etCiudadCargue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ciudad de Carga">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etDireccionCarga"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Direccion de Carga">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etCiudadDescargue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Ciudad de Descargue">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etDireccionDescargue"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Direccion de Descargue">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etEmailUsuario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Email">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etFechaHora"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Fecha y hora de recogida">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etDescripcion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Descripcion del Trasteo">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etTipoServicio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de Servicio">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etPrecio"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio">
+
+        </EditText>
+
+        <EditText
+            android:id="@+id/etEstado"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Estado">
+
+        </EditText>
+
+        <Button
+            android:id="@+id/btnIngresarNS"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="INGRESAR">
+
+        </Button>
+
+
+    </LinearLayout>
+
+</FrameLayout>

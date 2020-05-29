@@ -169,6 +169,7 @@ public class LoginActivity extends AppCompatActivity  {
         }
     }
 
+    //Login Google
     private void FirebaseGoogleAuth(GoogleSignInAccount acct) {
         //check if the account is null
         if (acct != null) {
@@ -209,41 +210,9 @@ public class LoginActivity extends AppCompatActivity  {
 
     }
 
-    private void firebaseAuthWithGoogle(final GoogleSignInAccount signInAccount) {
-        progressBar.setVisibility(View.VISIBLE);
-        signInButton.setVisibility(View.GONE);
-
-        AuthCredential credential = GoogleAuthProvider.getCredential(signInAccount.getIdToken(), null);
-        firebaseAuth.signInWithCredential(credential).addOnCompleteListener(this, new OnCompleteListener<AuthResult>() {
-            @Override
-            public void onComplete(@NonNull Task<AuthResult> task) {
-                progressBar.setVisibility(View.GONE);
-                signInButton.setVisibility(View.VISIBLE);
-
-                if (!task.isSuccessful()) {
-                    Toasty.error(getApplicationContext(), "Autenticación Fallida", Toasty.LENGTH_LONG).show();
-                }
-            }
-        });
-    }
-
     @Override
     protected void onStart() {
         super.onStart();
         firebaseAuth.addAuthStateListener(firebaseAuthListener);
     }
-
-    /*@Override
-    protected void onStop() {
-        super.onStop();
-        if(firebaseAuthListener != null) {
-            firebaseAuth.removeAuthStateListener(firebaseAuthListener);
-        }
-
-    }
-
-    @Override
-    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
-        Toasty.error(getApplicationContext(),"ERROR: No se pudo iniciar sesión.",Toasty.LENGTH_SHORT).show();
-    }*/
 }

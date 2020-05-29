@@ -1,19 +1,104 @@
 <?xml version="1.0" encoding="utf-8"?>
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    android:background="@color/graylight">
 
     <TextView
-        android:id="@+id/text_share"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
+        android:id="@+id/textView"
+        android:layout_width="309dp"
+        android:layout_height="17dp"
         android:layout_marginTop="8dp"
-        android:layout_marginEnd="8dp"
-        android:textAlignment="center"
-        android:textSize="20sp"
+        android:text="ventas@trasteosmedellin.com.co    |   444 95 31"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@+id/imageView2" />
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="193dp"
+        android:layout_height="121dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:srcCompat="@drawable/icontm" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="8dp"
+        android:background="@android:color/white"
+        android:orientation="vertical"
+        android:paddingLeft="30dp"
+        android:paddingRight="30dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/textView">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Llena el formulario y nos pondremos en contacto contigo lo mas pronto posible"
+            android:textAlignment="center" />
+
+        <EditText
+            android:id="@+id/sp_et_nombre"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:cursorVisible="false"
+            android:ems="10"
+            android:hint="Nombre"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:text="Nombre" />
+
+        <EditText
+            android:id="@+id/sp_et_email"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Email"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:text="Email" />
+
+        <EditText
+            android:id="@+id/sp_et_problema"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:hint="Problema"
+            android:inputType="textPersonName"
+            android:singleLine="true"
+            android:text="Problema" />
+
+        <EditText
+            android:id="@+id/sp_et_detalle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:ems="10"
+            android:gravity="top|left"
+            android:hint="Detalles del problema"
+            android:inputType="textMultiLine"
+            android:scrollbars="vertical"
+            android:lines="8"
+            android:minLines="6"
+            android:singleLine="false"
+            android:text="Detalle del problema" />
+
+        <Button
+            android:id="@+id/sp_btnEnviar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Enviar"/>
+    </LinearLayout>
 </androidx.constraintlayout.widget.ConstraintLayout>

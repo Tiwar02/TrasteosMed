@@ -24,6 +24,7 @@ import android.view.MenuItem;
 import android.view.View;
 
 import androidx.annotation.NonNull;
+import androidx.appcompat.app.ActionBarDrawerToggle;
 import androidx.appcompat.app.AlertDialog;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
@@ -52,6 +53,7 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     DrawerLayout drawer;
     TextView tvNombre, tvEmail;
     GoogleApiClient googleApiClient;
+    ActionBarDrawerToggle actionBarDrawerToggle;
     private FirebaseAuth firebaseAuth;
     private FirebaseAuth.AuthStateListener firebaseAuthListener;
     String name,email;
@@ -73,6 +75,11 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         });
         drawer = findViewById(R.id.drawer_layout);
         NavigationView navigationView = findViewById(R.id.nav_view);
+        actionBarDrawerToggle = new ActionBarDrawerToggle(this,drawer,toolbar,R.string.open,R.string.close);
+        drawer.addDrawerListener(actionBarDrawerToggle);
+        actionBarDrawerToggle.setDrawerIndicatorEnabled(true);
+        actionBarDrawerToggle.syncState();
+
 
         // Passing each menu ID as a set of Ids because each
         // menu should be considered as top level destinations.
@@ -85,8 +92,6 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         NavigationUI.setupActionBarWithNavController(this, navController, mAppBarConfiguration);
         NavigationUI.setupWithNavController(navigationView, navController);
         navigationView.setItemIconTintList(null);
-        
-        //navigationView.setNavigationItemSelectedListener(this);
 
         GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
                 .requestEmail()
@@ -171,34 +176,12 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
         });
     }
 
-    private void revoke(View view) {
-        firebaseAuth.signOut();
-
-        Auth.GoogleSignInApi.signOut(googleApiClient).setResultCallback(new ResultCallback<Status>() {
-            @Override
-            public void onResult(@NonNull Status status) {
-                if(status.isSuccess()) {
-                    goLogInScreen();
-                } else {
-                    Toasty.error(getApplicationContext(),"No se pudo revocar el acceso", Toasty.LENGTH_SHORT).show();
-                }
-            }
-        });
-    }
-
     private void goLogInScreen() {
         Intent intent = new Intent(this, LoginActivity.class);
         intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
         startActivity(intent);
     }
-
-    @Override
-    public boolean onCreateOptionsMenu(Menu menu) {
-        // Inflate the menu; this adds items to the action bar if it is present.
-        getMenuInflater().inflate(R.menu.main, menu);
-        return true;
-    }
-
+    
     @Override
     public boolean onSupportNavigateUp() {
         NavController navController = Navigation.findNavController(this, R.id.nav_host_fragment);
@@ -210,6 +193,4 @@ public class MainActivity extends AppCompatActivity implements GoogleApiClient.O
     public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
 
     }
-
-
 }
