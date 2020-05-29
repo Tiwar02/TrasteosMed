@@ -19,27 +19,48 @@ import androidx.lifecycle.Observer;
 import androidx.lifecycle.ViewModelProviders;
 
 import com.devjpah.trasteos_medellin.R;
+import com.devjpah.trasteos_medellin.register_service;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
 public class NewServiceFragment extends Fragment {
-   ImageButton imgExpress;
-    FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
-   FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+   ImageButton imgExpress, imgCompartido;
+
 
 
     public View onCreateView(@NonNull LayoutInflater inflater,
                              ViewGroup container, Bundle savedInstanceState) {
 
         View root = inflater.inflate(R.layout.fragment_new_service, container, false);
+        FragmentManager fragmentManager = getActivity().getSupportFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
         imgExpress = root.findViewById(R.id.btnExpress);
+        imgCompartido = root.findViewById(R.id.btnCompartido);
         imgExpress.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-        fragmentTransaction.replace(R.id.nav_host_fragment, new fragment)
-                startActivity();
+                Fragment nuevoFragmento = new register_service();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.nav_host_fragment, nuevoFragmento);
+                transaction.addToBackStack(null);
+
+                // Commit a la transacción
+                transaction.commit();
+
             }
         });
+        imgCompartido.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Fragment nuevoFragmento = new register_service();
+                FragmentTransaction transaction = getFragmentManager().beginTransaction();
+                transaction.replace(R.id.nav_host_fragment, nuevoFragmento);
+                transaction.addToBackStack(null);
+                // Commit a la transacción
+                transaction.commit();
+            }
+        });
+
         return root;
     }
 }
