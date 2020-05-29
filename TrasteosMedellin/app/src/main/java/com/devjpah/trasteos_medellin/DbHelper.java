@@ -6,9 +6,9 @@ import android.database.sqlite.SQLiteOpenHelper;
 
 public class DbHelper extends SQLiteOpenHelper {
     String Trasteos = "Create table Trasteos (Id Integer Primary Key, tipoVehiculo text, ciudadCargue text, direccionCargue text, " +
-            "idUsuario text, fechaHora text, descripcion text, tipoServicio text, Precio Integer, Estado text," +
-            "Foreign Key(idUsuario) references Clientes(Cedula))";
-    String Clientes = "Create table Clientes (Cedula text not null, Nombres text not null, Apellidos text," +
+            "ciudadDescargue text, direccionDescargue text,emailUsuario text, fechaHora text, descripcion text, tipoServicio text, Precio Integer, Estado text," +
+            "Foreign Key(emailUsuario) references Clientes(Email))";
+    String Clientes = "Create table Clientes (Cedula text not null, Nombres text not null,  " +
             "fechaNacimiento text, tipoUsuario text, Telefono Integer, Email text Primary Key not null, Contraseña text)";
     @Override
     public void onCreate(SQLiteDatabase db) {
@@ -24,7 +24,7 @@ public class DbHelper extends SQLiteOpenHelper {
         db.execSQL(Clientes);
     }
 
-    DbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
+    public DbHelper(Context context, String name, SQLiteDatabase.CursorFactory factory, int version)
     {
         super(context, name, factory, version);
     }

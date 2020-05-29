@@ -22,13 +22,13 @@ public class PerfilFragment extends Fragment {
                              ViewGroup container, Bundle savedInstanceState) {
         perfilViewModel = ViewModelProviders.of(this).get(PerfilViewModel.class);
         View view = inflater.inflate(R.layout.fragment_new_service, container, false);
-        final TextView textView = view.findViewById(R.id.text_gallery);
+        /*final TextView textView = view.findViewById(R.id.text_gallery);
         perfilViewModel.getText().observe(this, new Observer<String>() {
             @Override
             public void onChanged(@Nullable String s) {
                 textView.setText(s);
             }
-        });
+        });*/
         return view;
     }
 }

@@ -15,6 +15,14 @@
       },
       "oauth_client": [
         {
+          "client_id": "1038120828281-adi2kb6ke8ali6pjds5fi7n5cnoevndq.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.devjpah.trasteos_medellin",
+            "certificate_hash": "4e821ac5584fdd226fc54c300ca96c5305a5513d"
+          }
+        },
+        {
           "client_id": "1038120828281-e92o1sgbg0gi7vl9qdr6ohpdmu6mhaui.apps.googleusercontent.com",
           "client_type": 1,
           "android_info": {
